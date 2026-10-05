@@ -21,11 +21,23 @@
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            margin-top: 150px; /* room for the 75% of the avatar above the container */
+            padding-top: calc(50px + 1rem); /* clear the 25% of the avatar inside the container */
+        }
+        .avatar {
+            position: absolute;
+            top: -150px; /* bottom 50px (25% of 200px) overlaps the container */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img class="avatar" src="assets/images/markLeder2025-200px-circle.png" alt="Mark Leder" width="200" height="200">
         <h1>Mark Leder</h1>
         <h2>Columbus, Ohio USA</h2>
         <p>Coming Soon!</p>
